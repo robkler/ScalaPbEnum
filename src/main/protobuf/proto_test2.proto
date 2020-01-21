@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "scalapb/scalapb.proto";
+import "proto_test.proto";
+
+
+message ProtoTest2 {
+    ProtoTest proto = 1 [(scalapb.field).no_box = true];
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "scalapb/scalapb.proto";
+option (scalapb.options) = {
+    import: "typeMapper.TypeMappers.typeMapperCurrencyType"
+};
+
+message ProtoTest {
+  string currency = 1 [(scalapb.field).type = "typeMapper.CurrencyType"];
+}
